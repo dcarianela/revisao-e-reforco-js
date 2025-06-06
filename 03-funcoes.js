@@ -54,10 +54,33 @@ const exemplo3 = () => {
 
 exemplo3(); // Chamada deve ser feita após a declaração
 
-const saudacao = (nome) => {
-    console.log("Olá "+nome);   
-}
+/* Quando a função tem SOMENTE UM parâmetro, podemos
+remover os parênteses. E quando ela faz SOMENTE UMA ÚNICA ação (ideal), podemos remover as chaves e deixar em uma linha. */
+const saudacao = nome => console.log("Olá "+nome);
 
 saudacao("Sunoo");
 saudacao("Sunghoon");
 saudacao("Jaehyun");
+
+separador();
+
+// Com retorno EXPLÍCITO
+const calcularMetadeSintaxeCompleta = (valor) => {
+    return valor / 2;
+}
+console.log(calcularMetadeSintaxeCompleta(10));
+
+// Com retorno IMPLÍCITO
+const calcularMetade = valor => valor / 2;
+console.log(calcularMetade(10));
+
+separador();
+
+/* 1) Reescreva a função do exercício anterior usando a sintaxe de arrow function' */
+const subtracao = (valor1, valor2) => valor1 - valor2;
+
+/* 2) Teste fazendo novas chamadas e novas saídas */
+let result = subtracao(20, 10);
+let result2 = subtracao(77, 55);
+
+console.log(result, result2);
