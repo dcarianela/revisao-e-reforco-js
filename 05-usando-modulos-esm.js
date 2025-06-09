@@ -9,6 +9,8 @@ import { saudacao, clientes, separador } from './modulos-esm/exemplos.js';
 // Uso de um "alias"
 import { pessoa, livro, alunos as personagens } from './modulos-esm/dados.js';
 
+import { converterMaiusculo, converterMinusculo, formatarValor } from './modulos-esm/funcoes.js';
+
 saudacao("Jaehyun");
 console.log(clientes);
 
@@ -29,5 +31,15 @@ console.log(pessoa.nome);
 console.log(livro);
 console.log(personagens); // lembre-se: personagens é um apelido para alunos
 
+separador();
+
+/* Exercícios */
+
+/* No arquivo 05, importe e utilize estas funções passando textos e valores para testes. */
+console.log(converterMaiusculo("ni-ki"));
+console.log(converterMinusculo("SUNOO"));
+console.log(formatarValor(5577.00));
 
 
+//import * as klaibert from './modulos-esm/funcoes.js';
+//console.log(klaibert.converterMaiusculo("ni-ki"));
