@@ -14,4 +14,15 @@ const converterMinusculo = texto => texto.toLowerCase();
 const formatarValor = valor => valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 /* 3) Exporte-as como módulos */
-export { converterMaiusculo, converterMinusculo, formatarValor };
+// export { converterMaiusculo, converterMinusculo, formatarValor };
+
+export function classificar(...texto){
+    return texto.sort();
+}
+
+console.log( classificar("Goiaba", "Abacaxi", "Uva", "Mexerica"));
+console.log(
+    classificar(
+        "txt", "bts", "enha", "njz"
+    )
+);
