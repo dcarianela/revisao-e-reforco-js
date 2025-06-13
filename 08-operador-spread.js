@@ -35,3 +35,7 @@ const compra = {
 };
 
 console.log(compra);
+
+console.log(
+  `O cliente ${compra.nome} fez uma compra no valor de ${compra.total}`
+);
