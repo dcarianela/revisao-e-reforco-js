@@ -10,8 +10,30 @@ A função callback recebe dois parâmetros: o acumulador (valor que é acumulad
 
 // Exemplo 1
 const valores = [10, 5, 50, 200, 1000];
-const total = valores.reduce((acumulador, valor) => {
-  return acumulador + valor;
-}, 0);
-
+const total = valores.reduce((acumulador, valor) => acumulador + valor, 0);
 console.log(total);
+
+separador();
+
+// Exercício 1: realize a soma dos preços de todos os cursos
+const precoCursos = cursos.reduce(
+  (acumulador, { preco }) => acumulador + preco,
+  0
+);
+console.log("Soma de todos os preços: " + precoCursos.toFixed(2));
+
+separador();
+
+// Exercício 2: calcule a média dos preços de todos os cursos
+const mediaCursos = cursos.reduce((acumulador, { preco }) => {
+  return acumulador + preco / cursos.length;
+}, 0);
+console.log("Média dos preços: " + mediaCursos.toFixed(2));
+
+separador();
+
+// Exercício 3: calcule o preço total dos cursos de Front-End
+const precoFrontEnd = cursos
+  .filter(({ categoria }) => categoria === "Front-End")
+  .reduce((acumulador, { preco }) => acumulador + preco, 0);
+console.log("Soma dos preços dos cursos de Front: " + precoFrontEnd.toFixed(2));
