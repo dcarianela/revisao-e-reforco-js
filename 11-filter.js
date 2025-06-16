@@ -82,7 +82,7 @@ separador();
 Gerar um novo array com os cursos da categoria Back-End e COM O PREÇO atualizado com 10% de desconto. Para está atividade você deverá combinar filter com map. */
 
 const backEndDesconto = cursos
-  .filter((curso) => curso.categoria === "Back-End")
+  .filter(({ categoria }) => categoria === "Back-End")
   .map((curso) => {
     return {
       ...curso, // spread das propriedades do curso (copiando-as pra cá)
